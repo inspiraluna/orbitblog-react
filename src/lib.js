@@ -71,8 +71,9 @@ const OrbitBlogPosts = () => {
         <h1>OrbitBlogPosts Component</h1>
         
         <h6>ipfs id:{ipfsId?.id}</h6>
-        {subjectList.map(s => (<li key={s}>{s}</li>))} 
+        {subjectList.toString()}
     </div>
     )
 }
+        // {subjectList.map(s => (<li key={s}>{s}</li>))} 
 export { OrbitBlogPosts };
