@@ -1,5 +1,5 @@
 import './App.css';
-import OrbitBlogPosts from './lib'
+import {OrbitBlogPosts} from './lib'
 function App() {
   return (
     <div className="App">

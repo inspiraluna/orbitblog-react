@@ -1,6 +1,6 @@
 import {create} from 'ipfs'
 export const startIPFS = async (_options) => {
-    let repo = _options?.repo!==undefined?_options.repo:'./ipfs-repo-003'
+    let repo = _options?.repo!==undefined?_options.repo:'./ipfs-repo-001'
     let ipfs 
     const options = {
       repo: repo,
@@ -28,7 +28,6 @@ export const startIPFS = async (_options) => {
     try {
       if (ipfs !== undefined) await ipfs.stop()
       ipfs = await create(options)
-      console.log('ipfs.id',await ipfs.id())
     } catch (ex) {
       console.log("couldn' create ipfs node trying without network", ex)
       options.config.Bootstrap = []
