@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const resolve = require('resolve');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -24,6 +25,7 @@ const ForkTsCheckerWebpackPlugin =
     ? require('react-dev-utils/ForkTsCheckerWarningWebpackPlugin')
     : require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+
 const createEnvironmentHash = require('./webpack/persistentCache/createEnvironmentHash');
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
@@ -190,7 +192,6 @@ module.exports = function (webpackEnv) {
     target: ['browserslist'],
     // Webpack noise constrained to errors and warnings
     stats: 'errors-warnings',
-    externals: {react: 'react'},
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
     // Stop compilation early in production
     bail: isEnvProduction,
@@ -201,7 +202,7 @@ module.exports = function (webpackEnv) {
       : isEnvDevelopment && 'cheap-module-source-map',
     // These are the "entry points" to our application.
     // This means they will be the "root" imports that are included in JS bundle.
-    entry:isEnvProduction ? paths.appModulueJs : paths.appIndexJs,
+    entry:isEnvProduction ? paths.moduleLibJs : paths.appIndexJs,
     output: {
       // The build folder.
       path: paths.moduleBuild,
@@ -210,17 +211,14 @@ module.exports = function (webpackEnv) {
       // There will be one main bundle, and one file per asynchronous chunk.
       // In development, it does not produce real files.
       filename: "index.js",
-      globalObject: 'this',
-      // library: {
-      //   name: 'orbitblog',
-      //   libraryTarget: 'umd',
-      // },
-      // library: {
-      //   // note there's no `name` here
-      //   type: 'module',
-      // },
-      // library: 'orbitblog',
+      // library: "orbitblog",
       libraryTarget: 'umd',
+      globalObject: 'this',
+      library: {
+        name: 'OrbitBlog',
+        type: 'umd',
+      },
+      umdNamedDefine:true,
       // filename: isEnvProduction
       //   ? 'static/js/[name].[contenthash:8].js'
       //   : isEnvDevelopment && 'static/js/bundle.js',
@@ -577,47 +575,50 @@ module.exports = function (webpackEnv) {
         },
       ].filter(Boolean),
     },
+    externals: {
+      'react': 'commonjs react' 
+    },
     plugins: [
       // Generates an `index.html` file with the <script> injected.
       new NodePolyfillPlugin({excludeAliases: ['console']}),
-      // isEnvProduction &&
-      //       new HtmlWebpackPlugin(
-      //       Object.assign(
-      //         {},
-      //         {
-      //           inject: true,
-      //           template: paths.appHtml,
-      //         },
-      //         isEnvProduction
-      //           ? {
-      //               minify: {
-      //                 removeComments: true,
-      //                 collapseWhitespace: true,
-      //                 removeRedundantAttributes: true,
-      //                 useShortDoctype: true,
-      //                 removeEmptyAttributes: true,
-      //                 removeStyleLinkTypeAttributes: true,
-      //                 keepClosingSlash: true,
-      //                 minifyJS: true,
-      //                 minifyCSS: true,
-      //                 minifyURLs: true,
-      //               },
-      //             }
-      //           : undefined
-      //       )
-      // ),
+      isEnvProduction &&
+            new HtmlWebpackPlugin(
+            Object.assign(
+              {},
+              {
+                inject: true,
+                template: paths.appHtml,
+              },
+              isEnvProduction
+                ? {
+                    minify: {
+                      removeComments: true,
+                      collapseWhitespace: true,
+                      removeRedundantAttributes: true,
+                      useShortDoctype: true,
+                      removeEmptyAttributes: true,
+                      removeStyleLinkTypeAttributes: true,
+                      keepClosingSlash: true,
+                      minifyJS: true,
+                      minifyCSS: true,
+                      minifyURLs: true,
+                    },
+                  }
+                : undefined
+            )
+      ),
       // Inlines the webpack runtime script. This script is too small to warrant
       // a network request.
       // https://github.com/facebook/create-react-app/issues/5358
-      // isEnvProduction &&
-      //   shouldInlineRuntimeChunk &&
-      //   new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime-.+[.]js/]),
+      isEnvProduction &&
+        shouldInlineRuntimeChunk &&
+        new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime-.+[.]js/]),
       // Makes some environment variables available in index.html.
       // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
       // <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
       // It will be an empty string unless you specify "homepage"
       // in `package.json`, in which case it will be the pathname of that URL.
-      // new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
+      new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
       // This gives some necessary context to module not found errors, such as
       // the requesting resource.
       new ModuleNotFoundPlugin(paths.appPath),

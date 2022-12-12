@@ -1,10 +1,14 @@
 // import OrbitBlogPosts from './components/OrbitBlogPosts';
 import React, {useEffect, useState} from "react"
+// import React from "react"
 import startIPFS from "./ipfs/startIPFS"
 import OrbitDB from 'orbit-db'
 import Identities from 'orbit-db-identity-provider'
+// const OrbitBlogPosts = (props) => {
+//     return (<h1>works!</h1>)
+// }
 
-const OrbitBlogPosts = () => {
+const OrbitBlogPosts = (props) => {
 
     const [ipfsId, setIpfsId] = useState({});
     const [subjectList, setSubjectList] = useState([]);
@@ -68,12 +72,11 @@ const OrbitBlogPosts = () => {
     
     return (
         <div>
-        <h1>OrbitBlogPosts Component</h1>
-        
-        <h6>ipfs id:{ipfsId?.id}</h6>
-        {subjectList.toString()}
-    </div>
+            <h1>OrbitBlogPosts Component</h1>    
+            <h6>ipfs id:{ipfsId?.id}</h6>
+            {subjectList.toString()}
+        </div>
     )
-}
+} 
         // {subjectList.map(s => (<li key={s}>{s}</li>))} 
 export { OrbitBlogPosts };

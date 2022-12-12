@@ -19,8 +19,9 @@
 2. add variables to config/paths.js
     - moduleBuild: resolveApp('dist')
     - appModulueJs: resolveModule(resolveApp, 'src/lib') 
-3. in config/webpack.lib-config.js change output.pathto paths.moduleBuild 
-4. add to output in config/webpack.lib-config.js       
+3. in config/webpack.lib-config.js change output.pathto paths.moduleBuild
+4. change in config/webpack.lib-config.js ```entry: isEnvProduction ? paths.appModulueJs : paths.appIndexJs,```
+5. add to output in config/webpack.lib-config.js       
 ```
       globalObject: 'this',
       library: {
@@ -28,13 +29,18 @@
         type: 'umd',
       },
 ```
-5. add to package.json of npm module 
+6. add to package.json of npm module 
     "main": "dist/index.js",
     "module": "dist/index.js",
-6. In scripts/build.js change 
+7. In scripts/build.js change 
 ```const configFactory = require('../config/webpack.lib-config');``` 
     and replace:
 -        paths.appBuild,
 +        paths.moduleBuild,
 
-8. run ```yarn build```
+9. run ```yarn build```
+
+
+Remark: Check: 
+Bug: Cannot read property 'useState' of null 
+https://github.com/facebook/react/issues/24928
