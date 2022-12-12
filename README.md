@@ -1,6 +1,5 @@
 # orbitblog npm library
 
-## usage npm:
-1. Run  ```npm i orbitblog````
+## usage:
+1. Run  ```npm i orbitblog``` or ```yarn add orbitblog``` 
 2. In your react app 
-    - 

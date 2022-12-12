@@ -211,15 +211,6 @@ module.exports = function (webpackEnv) {
       // In development, it does not produce real files.
       filename: "index.js",
       globalObject: 'this',
-      // library: {
-      //   name: 'orbitblog',
-      //   libraryTarget: 'umd',
-      // },
-      // library: {
-      //   // note there's no `name` here
-      //   type: 'module',
-      // },
-      // library: 'orbitblog',
       libraryTarget: 'umd',
       // filename: isEnvProduction
       //   ? 'static/js/[name].[contenthash:8].js'

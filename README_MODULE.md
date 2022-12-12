@@ -24,10 +24,7 @@
 5. add to output in config/webpack.lib-config.js       
 ```
       globalObject: 'this',
-      library: {
-        name: 'webpackOrbitBlog',
-        type: 'umd',
-      },
+      libraryTarget: 'umd',
 ```
 6. add to package.json of npm module 
     "main": "dist/index.js",
@@ -43,4 +40,16 @@
 
 Remark: Check: 
 Bug: Cannot read property 'useState' of null 
-https://github.com/facebook/react/issues/24928
+- https://github.com/facebook/react/issues/24928
+- https://github.com/facebook/react/issues/24658
+- https://github.com/facebook/react/issues/24774
+
+Related information 
+- How to Publish ES6 React Modules to NPM https://www.pluralsight.com/guides/publish-es6-react-modules-to-npm
+- How to Build and Publish NPM packages with Webpack https://itnext.io/how-to-build-and-publish-npm-packages-with-webpack-dea19bb14627
+- Publish React components as an npm package https://levelup.gitconnected.com/publish-react-components-as-an-npm-package-7a671a2fb7f
+- Creating a Reusable Component Library with React, Storybook, and Webpack https://levelup.gitconnected.com/creating-a-reusable-component-library-with-react-storybook-and-webpack-c0a30076aa54
+- Modern npm package 
+    - https://snyk.io/blog/best-practices-create-modern-npm-package/
+    - https://github.com/snyk-labs/modern-npm-package
+- Atomic design https://bradfrost.com/blog/post/atomic-web-design/
