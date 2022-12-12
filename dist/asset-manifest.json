@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.js": "/index.js",
+    "main.css": "/static/css/main.9a71fbc5.css",
+    "27.index.js": "/27.index.js",
+    "index.cjs": "/20db254186dfe63a8a6d.cjs",
+    "resolver.cjs": "/8341148696af66384426.cjs",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "index.js",
+    "static/css/main.9a71fbc5.css"
+  ]
+}

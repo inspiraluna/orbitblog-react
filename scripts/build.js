@@ -19,7 +19,7 @@ const chalk = require('react-dev-utils/chalk');
 const fs = require('fs-extra');
 const bfj = require('bfj');
 const webpack = require('webpack');
-const configFactory = require('../config/webpack.config');
+const configFactory = require('../config/webpack.lib-config');
 const paths = require('../config/paths');
 const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
 const formatWebpackMessages = require('react-dev-utils/formatWebpackMessages');
@@ -90,7 +90,7 @@ checkBrowsers(paths.appPath, isInteractive)
       printFileSizesAfterBuild(
         stats,
         previousFileSizes,
-        paths.appBuild,
+        paths.moduleBuild,
         WARN_AFTER_BUNDLE_GZIP_SIZE,
         WARN_AFTER_CHUNK_GZIP_SIZE
       );

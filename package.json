@@ -1,7 +1,9 @@
 {
-  "name": "08-orbitblog",
-  "version": "0.1.0",
+  "name": "orbitblog",
+  "version": "0.1.2",
   "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -79,9 +81,11 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "chrome >= 67",
+      "edge >= 79",
+      "firefox >= 68",
+      "opera >= 54",
+      "safari >= 14"
     ],
     "development": [
       "last 1 chrome version",
