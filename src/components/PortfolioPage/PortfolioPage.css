@@ -1,0 +1,372 @@
+.portfolio-page {
+  align-items: flex-start;
+  background-color: #ffffff;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 2484px;
+  padding: 75px 82px;
+  width: 1440px;
+}
+
+.logo {
+  color: var(--black);
+  font-family: var(--font-family-montez);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  height: 37px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 9px;
+}
+
+.group-9 {
+  align-items: flex-start;
+  display: flex;
+  gap: 64px;
+  height: 410px;
+  /* margin-top: 32px; */
+  min-width: 759px;
+}
+
+.overlap-group {
+  height: 161px;
+  position: relative;
+  width: 136px;
+}
+
+.group-7 {
+  align-items: flex-start;
+  display: flex;
+  height: 46px;
+  left: 42px;
+  min-width: 84px;
+  padding: 0 4.8px;
+  position: absolute;
+  top: 0;
+}
+
+.rectangle-31 {
+  background-color: var(--geraldine);
+  border: 1px solid;
+  border-color: var(--cararra);
+  border-radius: 20px;
+  height: 31px;
+  margin-top: -0.28px;
+  transform: rotate(-18.38deg);
+  width: 3px;
+}
+
+.rectangle-32 {
+  background-color: var(--chicago);
+  border: 1px solid;
+  border-color: var(--cararra);
+  border-radius: 20px;
+  height: 31px;
+  margin-left: 21px;
+  margin-top: 0.04px;
+  transform: rotate(9.28deg);
+  width: 3px;
+}
+
+.rectangle-33 {
+  align-self: center;
+  background-color: var(--chicago);
+  border: 1px solid;
+  border-color: var(--cararra);
+  border-radius: 20px;
+  height: 31px;
+  margin-left: 21px;
+  margin-top: 0.06px;
+  transform: rotate(19.91deg);
+  width: 3px;
+}
+
+.rectangle-34 {
+  align-self: flex-end;
+  background-color: var(--geraldine);
+  border: 1px solid;
+  border-color: var(--cararra);
+  border-radius: 20px;
+  height: 31px;
+  margin-bottom: -2.78px;
+  margin-left: 15px;
+  transform: rotate(40.77deg);
+  width: 3px;
+}
+
+.nico-neumarkt-2022-1 {
+  height: 123px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 38px;
+  width: 136px;
+}
+
+.text-headline {
+  align-items: flex-start;
+  /* align-self: flex-end; */
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: fit-content;
+}
+
+.consultant-for-decen {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  width: 529px;
+}
+
+.my-name-is-nico-krau {
+  letter-spacing: 0;
+  line-height: 34px;
+  text-shadow: 0px 4px 4px #00000040;
+  width: 559px;
+}
+
+.heading {
+  height: 33px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 200px;
+  margin-top: 81px;
+  width: 317px;
+}
+
+.projects {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin-right: 48px;
+  margin-top: 83px;
+  width: fit-content;
+}
+
+.case-study-one {
+  align-items: flex-end;
+  display: flex;
+  gap: 30px;
+  padding: 0px 180px 0px 0px;
+  width: 1033px;
+}
+
+.image-one {
+  height: 209px;
+  min-width: 317px;
+}
+
+.case-study-text-one {
+  height: 209px;
+  min-width: 287px;
+}
+
+.frame-container {
+  height: 225px;
+  position: relative;
+  width: 287px;
+}
+
+.frame-22 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: fit-content;
+}
+
+.p2-p-prototype,
+.p2-p-argument-models,
+.uiux-design {
+  letter-spacing: 0;
+  line-height: 34px;
+  white-space: nowrap;
+  width: 474px;
+}
+
+.orbit-blog,
+.de-amo-decentralized-argument-models,
+.name {
+  letter-spacing: 0;
+  line-height: 34px;
+  white-space: break-spaces;
+  width: fit-content;
+}
+
+.implemented-a-basic {
+  height: 147px;
+  letter-spacing: 0;
+  line-height: 34px;
+  width: 474px;
+}
+
+.frame-21 {
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--black);
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  top: 171px;
+  width: 181px;
+}
+
+.read-more {
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--black);
+  display: flex;
+  gap: 10px;
+  /* height: 54px; */
+  justify-content: center;
+  left: 0;
+  /* padding: 0px 0px 10px 10px; */
+  /* position: absolute;
+  top: 214px;
+  width: 474px; */
+}
+
+.case-study-text-one-1 {
+  height: 225px;
+  min-width: 469px;
+  position: relative;
+}
+
+.lorem-ipsum-dolor-si {
+  letter-spacing: 0;
+  line-height: 34px;
+  width: 393px;
+}
+
+.case-study-text-one-2 {
+  height: 225px;
+  min-width: 393px;
+  position: relative;
+}
+
+.heading-1 {
+  height: 33px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 200px;
+  margin-top: 109px;
+  width: 317px;
+}
+
+.frame-29 {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  gap: 30px;
+  margin-right: 62px;
+  margin-top: 52px;
+  width: fit-content;
+}
+
+.article-one {
+  height: 307px;
+  min-width: 317px;
+  position: relative;
+}
+
+.rectangle-35 {
+  height: 209px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 317px;
+}
+
+.article-two {
+  height: 307px;
+  min-width: 318px;
+  position: relative;
+}
+
+.rectangle-36 {
+  height: 209px;
+  left: 1px;
+  position: absolute;
+  top: 0;
+  width: 317px;
+}
+
+.article-three {
+  height: 321px;
+  min-width: 319px;
+  position: relative;
+}
+
+.rectangle-37 {
+  height: 209px;
+  left: 2px;
+  position: absolute;
+  top: 0;
+  width: 317px;
+}
+
+.frame-28 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  left: 0;
+  position: absolute;
+  top: 221px;
+  width: fit-content;
+}
+
+.how-to-design-your-first-ux-portfolio {
+  /* height: 44px; */
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: -1.00px;
+  width: 317px;
+}
+
+.footer {
+  align-items: flex-end;
+  align-self: flex-end;
+  display: flex;
+  gap: 592px;
+  margin-right: 16px;
+  margin-top: 148px;
+  min-width: 1060px;
+}
+
+.socials {
+  align-items: flex-start;
+  display: flex;
+  gap: 32px;
+  width: fit-content;
+}
+
+.socials-item {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: 73px;
+}
+
+.danny-sylvestergmailcom {
+  height: 28px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 288px;
+}
+

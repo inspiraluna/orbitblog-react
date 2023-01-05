@@ -1,0 +1,23 @@
+.frame-21-1 {
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--black);
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  top: 171px;
+  width: 181px;
+}
+
+.read-case-study {
+  letter-spacing: 0;
+  /* line-height: 34px; */
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+

@@ -10,7 +10,8 @@
   ],
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -56,6 +57,7 @@
     "react-dev-utils": "^12.0.1",
     "react-dom": "^18.2.0",
     "react-refresh": "^0.11.0",
+    "react-router-dom": "5.2.0",
     "resolve": "^1.20.0",
     "resolve-url-loader": "^4.0.0",
     "sass-loader": "^12.3.0",
@@ -73,10 +75,11 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "dependencies": {
-    "ipfs": "^0.59.1",
-    "orbit-db": "^0.28.6",
+    "@decentrasol/react-orbitdb": "^0.1.9",
+    "ethers": "^5.7.2",
     "orbit-db-identity-provider": "^0.4.0",
-    "orbit-db-io": "^1.0.2"
+    "orbit-db-io": "1.0.2",
+    "pretty-browser-log": "^1.0.8"
   },
   "scripts": {
     "start": "node scripts/start.js",

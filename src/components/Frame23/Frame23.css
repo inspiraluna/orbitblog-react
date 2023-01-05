@@ -1,0 +1,21 @@
+.frame-2-1 {
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--black);
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  width: 136px;
+}
+
+.read-on-medium {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: -5.00px;
+  margin-right: -5.00px;
+  margin-top: -1.00px;
+  width: fit-content;
+}
+
